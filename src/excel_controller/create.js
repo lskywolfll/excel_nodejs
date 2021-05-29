@@ -1,7 +1,7 @@
 const excel = require('exceljs');
 const path = require('path');
-let ruta = path.join(__dirname.split('excel')[0])
-ruta += "/Informes/"
+let ruta = path.join(__dirname.split('excel_controller')[0] + "Informes")
+console.log(ruta)
 // EXCEL/src/ [0]
 // excel [1]
 
