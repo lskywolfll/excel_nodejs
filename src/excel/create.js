@@ -59,6 +59,19 @@ function crear(datos, nombre_espacio_trabajo = "Reporte") {
         }
     };
 
+    // Fecha de la descarga
+    estilosDeTrabajo.mergeCells('B6', 'E6');
+    estilosDeTrabajo.getCell('B6').value = `${dia()} de ${mes()} del ${year()}`;
+    estilosDeTrabajo.getCell('B6').style = {
+        alignment: {
+            horizontal: 'center',
+            vertical: 'middle',
+        },
+        font: {
+            bold: true,
+        },
+    };
+
     // Inicio del esquema de datos para rellenar
     // Utilizamos el getRow para empezar la maqueta donde pondremos nuestra lista de datos
     // Cabe destacar ver que no entre en conflicto con el lo hecho anteriormente con el titulo
